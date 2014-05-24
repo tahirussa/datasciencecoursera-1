@@ -13,7 +13,7 @@ generate <- function(input = character()){
     dataset$subject <- as.factor(dataset$subject)
     dataset <- dataset[order(dataset$subject, dataset$activity), ]
     target <- create(dataset)
-    write.table(target, file = paste(input, "/clear data.txt", sep = ""), 
+    write.table(target, file = paste(input, "/tidy_dataset.txt", sep = ""), 
                 quote = FALSE, row.names = FALSE)
 }
 
@@ -21,11 +21,11 @@ generate <- function(input = character()){
 ## Variable "set" indicates which data set is read, eg. "test".
 
 read <- function(input = character(), set = character()){
-    subject <- read.table(paste(input, "/", set, "/subject_", set, ".txt", 
+    subject <- read.table(paste(input, "/", set, "/subject_", set, ".txt",
                                 sep = ""))
-    activity <- read.table(paste(input, "/", set, "/y_", set, ".txt", 
+    activity <- read.table(paste(input, "/", set, "/y_", set, ".txt",
                                 sep = ""))
-    dataset <- read.table(paste(input, "/", set, "/X_", set, ".txt", 
+    dataset <- read.table(paste(input, "/", set, "/X_", set, ".txt",
                                 sep = ""))
     data <- cbind(subject, activity, dataset)
     return(data)
