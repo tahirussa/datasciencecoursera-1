@@ -1,7 +1,6 @@
 # Peer Assessment 2 for Reproducile Research: Analysis of Storm Data
 
-by Weifeng Zhang
-
+by Tahir
 ## Introduction
 
 Storms and other severe weather events usually cause both public health and economic loss, such as fatalities, injuries, property, and crop damage. Therefore, it's believed that it help to avoid the outcomes to know about which type of weather events is the most harmful, no matter to population health or economic consequences.
